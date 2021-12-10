@@ -1,0 +1,222 @@
+body,html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(176, 212, 243);
+}.dashed-container,.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dashed-container{
+    border: 2px dashed rgb(132, 160, 192);
+    min-height:220px ;
+    width: 500px; 
+    margin:30px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+.icon{
+    position: relative;
+    width: 75px;
+    height: 100px;
+}
+.icon img{
+    width: 70px;
+    background-color:azure;
+    position: absolute;
+    border-radius: 12px;
+    transform-origin: bottom;
+    transition: transform 350ms ease-in-out;
+}
+.dragged .icon .center{
+    z-index: 2;
+    transform: translateY(-5px);
+}
+ .dragged{
+     background-color: rgb(126, 210, 243);
+     border-color: rgb(13, 41, 170);
+ }
+.dragged .icon .right{
+    transform: rotate(18deg) translateX(13px) scale(.9) ;
+}
+.dragged .icon .left{
+    transform: rotate(-18deg) translateX(-13px) scale(.9) ;
+}
+.main-container{
+    background-color: azure;
+    border-radius: 20px;
+    margin: 0 28%;
+    margin-top: 2%;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.281);
+}
+#fileinput{
+    display: none;
+}
+.title{
+    margin-top: 8px;
+}
+.browsebtn{
+    color: rgb(114, 161, 226);
+    cursor: pointer;
+}
+ 
+.progress-container{
+    width: 500px;
+    height: 70px;
+    border: 2px solid rgb(235, 235, 230);
+    margin-bottom: 15px;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+}
+.progress-container .bg-progress{
+     background-color: rgb(238, 219, 113);
+     width: 0%;
+     height: 100%;
+     /* transform: scaleX(0); */
+     transform-origin: left;
+     border-radius: 3%;
+     transition: width .25s linear;
+     position: absolute;
+     
+}
+.progress-container .inner-container{
+  position: absolute;
+  z-index: 1;
+  margin: 8px 15px;
+ width:calc(100% - 30px) ; 
+}
+.percent-container{
+    font-size: 14px;
+    margin: 4px;
+    opacity: .9;
+}
+.progress-bar{
+    height: 6px;
+    width: 100%;
+    background-color: rgb(32, 32, 153);
+    border-radius: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform  .25s linear;
+}
+p{
+    opacity: .8;
+    text-align: center;
+}
+.downloadable-link{
+    width: 500px;
+    margin-bottom: 5px;
+   display: none;
+}
+.downloadable-link .inputlink{
+    position: relative;
+    width: 100%
+}
+.downloadable-link .inputlink input
+{
+    width: 100%;
+    border: 2px dashed rgb(60, 93, 199);
+    border-radius: 7px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: rgba(237, 247, 250, 0.945);
+}
+.downloadable-link .inputlink img{
+    position: absolute;
+    width: 20px;
+    right: 7px;
+    top: 10px;
+}
+
+.Email-container{
+    display: flex;
+    align-items: center;
+    border: 2px dashed rgb(50, 74, 211);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 5px;
+    
+}
+.Email-container form{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.Email-container  .field
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    
+    width: 400px;
+}
+.Email-container label{
+    font-size: 17px;
+}
+.Email-container input{
+    border: none;
+     
+    border-bottom: 2px solid rgb(21, 146, 187);
+    background-color:azure ;
+    text-align: center;
+}
+.Email-container input:focus{
+    outline: none;
+}
+.Email-container .sub{
+    font-size: 17px;
+    padding: 5px 25px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(151, 199, 241);
+    cursor: pointer;
+    color: rgb(88, 124, 155);
+    border-radius: 10px;
+}
+nav{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 160px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 200;
+    color: #6b6be9;
+    padding: 10px;
+
+}
+nav a:hover{
+    border: 2px dashed rgb(54, 24, 224);
+    border-radius: 10px;
+}
+header{
+    float: left;
+    border: none;
+    margin-left: 25px;
+    margin-top: -27px;
+    display: block;
+    position: relative;
+}
+header p{
+    font-family:cursive;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom: 2px dashed rgb(224, 82, 213);
+    border-right: 2px dashed rgb(188, 30, 236);
+}
+
+header img{
+    width: 154px;
+    position: absolute;
+    top: 11px;
+    height: 38px;
+}
